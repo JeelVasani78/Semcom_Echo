@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{DDE74932-DAD1-464D-82C2-74AAB7054559}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TYBCA_35_PROJECT_ALUMNI_PLATFORM</RootNamespace>
+    <AssemblyName>TYBCA_35_PROJECT_ALUMNI_PLATFORM</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TYBCA_35_PROJECT_ALUMNI_PLATFORM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TYBCA_35_PROJECT_ALUMNI_PLATFORM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Alumnicheck.aspx" />
+    <Content Include="Admin\aprove_review.aspx" />
+    <Content Include="Admin\donations_requests.aspx" />
+    <Content Include="Admin\Job_Request.aspx" />
+    <Content Include="Admin\Dashboard_admin.aspx" />
+    <Content Include="Admin\Invitation.aspx" />
+    <Content Include="Admin\manage_seminar.aspx" />
+    <Content Include="Alumni\chat.aspx" />
+    <Content Include="Alumni\dash.aspx" />
+    <Content Include="Alumni\feedback.aspx" />
+    <Content Include="Alumni\Styles\chat.css" />
+    <Content Include="Alumni\Styles\master.css" />
+    <Content Include="Alumni\profile.aspx" />
+    <Content Include="Alumni\job_posting.aspx" />
+    <Content Include="Alumni\donation.aspx" />
+    <Content Include="Alumni\career_counseling.aspx" />
+    <Content Include="App_Data\Alumni_db.mdf" />
+    <Content Include="App_Data\Alumni_db_log.ldf">
+      <DependentUpon>Alumni_db.mdf</DependentUpon>
+    </Content>
+    <Content Include="forgot_pass.aspx" />
+    <Content Include="images\b_tiger.jpg" />
+    <Content Include="images\car1.jpg" />
+    <Content Include="images\car2.jpg" />
+    <Content Include="images\car_3.jpg" />
+    <Content Include="images\car_video1.mp4" />
+    <Content Include="images\cloud1.jpg" />
+    <Content Include="images\cvm_logo_outlined.png" />
+    <Content Include="images\Dhruvil.jpg" />
+    <Content Include="images\Dhruvil2.jpg" />
+    <Content Include="images\final_logo.jpg" />
+    <Content Include="images\himalay.jpg" />
+    <Content Include="images\mountain1.jpg" />
+    <Content Include="images\mountain2.jpg" />
+    <Content Include="images\mountain3.jpg" />
+    <Content Include="images\nature_video1.mp4" />
+    <Content Include="images\nature_video2.mp4" />
+    <Content Include="images\nature_video3.mp4" />
+    <Content Include="images\nav_logo3.png" />
+    <Content Include="images\passport_size6 %282%29.jpg" />
+    <Content Include="images\raphael1.jpg" />
+    <Content Include="images\red_crane.jpg" />
+    <Content Include="images\samurai1.jpg" />
+    <Content Include="images\semcom_clg_img.jpg" />
+    <Content Include="images\semcom_logo.png" />
+    <Content Include="images\semcom_mini_logo.png" />
+    <Content Include="images\skroll1.png" />
+    <Content Include="images\skroll2.jpg" />
+    <Content Include="images\skroll3.jpg" />
+    <Content Include="images\skroll4.jpg" />
+    <Content Include="images\skroll_sidebar.png" />
+    <Content Include="images\statue_of_unity.jpg" />
+    <Content Include="images\stint22_logo3.jpg" />
+    <Content Include="images\tajmahal.jpg" />
+    <Content Include="images\user.png" />
+    <Content Include="images\user_grp.jpg" />
+    <Content Include="images\user_grp.png" />
+    <Content Include="images\video4.mp4" />
+    <Content Include="images\vinit.jpg" />
+    <Content Include="images\vinit2.jpg" />
+    <Content Include="login.aspx" />
+    <Content Include="reset_pass.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="registration.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\aprove_review.aspx.designer.vb">
+      <DependentUpon>aprove_review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\aprove_review.aspx.vb">
+      <DependentUpon>aprove_review.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MainPage_admin.Master.designer.vb">
+      <DependentUpon>MainPage_admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MainPage_admin.Master.vb">
+      <DependentUpon>MainPage_admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Alumnicheck.aspx.designer.vb">
+      <DependentUpon>Alumnicheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Alumnicheck.aspx.vb">
+      <DependentUpon>Alumnicheck.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\donations_requests.aspx.designer.vb">
+      <DependentUpon>donations_requests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\donations_requests.aspx.vb">
+      <DependentUpon>donations_requests.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Job_Request.aspx.designer.vb">
+      <DependentUpon>Job_Request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Job_Request.aspx.vb">
+      <DependentUpon>Job_Request.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard_admin.aspx.designer.vb">
+      <DependentUpon>Dashboard_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard_admin.aspx.vb">
+      <DependentUpon>Dashboard_admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Invitation.aspx.designer.vb">
+      <DependentUpon>Invitation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Invitation.aspx.vb">
+      <DependentUpon>Invitation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage_seminar.aspx.designer.vb">
+      <DependentUpon>manage_seminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\manage_seminar.aspx.vb">
+      <DependentUpon>manage_seminar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\chat.aspx.designer.vb">
+      <DependentUpon>chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\chat.aspx.vb">
+      <DependentUpon>chat.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\dash.aspx.designer.vb">
+      <DependentUpon>dash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\dash.aspx.vb">
+      <DependentUpon>dash.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\feedback.aspx.designer.vb">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\feedback.aspx.vb">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\MainPage_alumni.Master.designer.vb">
+      <DependentUpon>MainPage_alumni.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\MainPage_alumni.Master.vb">
+      <DependentUpon>MainPage_alumni.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\profile.aspx.designer.vb">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\profile.aspx.vb">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\job_posting.aspx.designer.vb">
+      <DependentUpon>job_posting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\job_posting.aspx.vb">
+      <DependentUpon>job_posting.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\donation.aspx.designer.vb">
+      <DependentUpon>donation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\donation.aspx.vb">
+      <DependentUpon>donation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Alumni\career_counseling.aspx.designer.vb">
+      <DependentUpon>career_counseling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alumni\career_counseling.aspx.vb">
+      <DependentUpon>career_counseling.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="forgot_pass.aspx.designer.vb">
+      <DependentUpon>forgot_pass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot_pass.aspx.vb">
+      <DependentUpon>forgot_pass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="registration.aspx.designer.vb">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration.aspx.vb">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="reset_pass.aspx.designer.vb">
+      <DependentUpon>reset_pass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reset_pass.aspx.vb">
+      <DependentUpon>reset_pass.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\MainPage_admin.Master" />
+    <Content Include="Alumni\MainPage_alumni.Master" />
+    <None Include="images\skroll_sidebar.ai" />
+    <None Include="images\skroll_sidebar_logo.ai" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\Styles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54133</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

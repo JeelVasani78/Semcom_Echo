@@ -1,0 +1,229 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainPage_alumni.master.vb" Inherits="TYBCA_35_PROJECT_ALUMNI_PLATFORM.MainPage_alumni" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <link href="~/Alumni/Styles/master.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="main">
+        <form id="frm1" runat="server">
+            <asp:ScriptManager ID="script_manager1" runat="server"></asp:ScriptManager>
+            <!-- Sidebar -->
+            <div class="left">
+                <div class="cvm_outline_holder1">
+                    <img src="../images/cvm_logo_outlined.png" class="image_holder"/>
+                </div>
+                <div class="cvm_outline_holder2">
+                    <img src="../images/cvm_logo_outlined.png" class="image_holder"/>
+                </div>
+                <div class="l_top">
+                <asp:HyperLink ID="LinkDashboard1" runat="server" NavigateUrl="~/Alumni/dash.aspx">
+                    <i class="ri-function-fill"></i> Dashboard
+                </asp:HyperLink>
+                <asp:HyperLink ID="LinkProfile1" runat="server" NavigateUrl="~/Alumni/Profile.aspx">
+                    <i class="fas fa-user"></i> Profile
+                </asp:HyperLink>
+                
+                </asp:HyperLink>
+                <asp:HyperLink ID="LinkNetworking1" runat="server" NavigateUrl="/Alumni/chat.aspx">
+                    <i class="ri-message-3-fill"></i> Chat
+                </asp:HyperLink>
+                <asp:HyperLink ID="LinkDonation1" runat="server" NavigateUrl="/Alumni/donation.aspx">
+                    <i class="fas fa-donate"></i> Donation
+                </asp:HyperLink>
+                <asp:HyperLink ID="LinkJobPosting1" runat="server" NavigateUrl="/Alumni/job_posting.aspx">
+                    <i class="fas fa-briefcase"></i> Job Posting
+                </asp:HyperLink>
+                <asp:HyperLink ID="LinkSeminar1" runat="server" NavigateUrl="/Alumni/career_counseling.aspx">
+                    <i class="fas fa-chalkboard-teacher"></i> Seminar
+                </asp:HyperLink>
+               <asp:HyperLink ID="LinkFeedback1" runat="server" NavigateUrl="/Alumni/feedback.aspx">
+                    <i class="fas fa-comments"></i> Feedback
+                </asp:HyperLink>
+                <%--<asp:HyperLink ID="LinkNearby1" runat="server" NavigateUrl="#">
+                    <i class="fa-solid fa-location-dot"></i> Nearby --%>
+                </asp:HyperLink>
+                </div>
+                <div class="l_bottom">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <asp:Button ID="logout_btn" runat="server" CssClass="logout_btn" Text="Logout" for="l_bottom" OnClick="logout_btn_Click" />
+                </div>
+            </div>
+            <!-- End Sidebar -->
+
+            <div class="right">
+
+                <!-- Navbar -->
+                <div class="r_top">
+                    <div class="r_t_left">
+                        <span>Alumni Platform</span>
+                    </div>
+                    <div class="r_t_right">
+                        
+                        <div class="searchbar_holder">
+                            <asp:UpdatePanel ID="search_up1" runat="server">
+                            <ContentTemplate>
+                                <div class="search_top">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <asp:TextBox ID="searchbar" runat="server" CssClass="searchbar" placeholder="Search" AutoPostBack="true" OnTextChanged="searchbar_TextChanged"></asp:TextBox>
+                                </div>
+                                <div class="search_bottom">
+
+                                    <asp:Repeater ID="search_r1" runat="server">
+                                    <ItemTemplate>
+                                    <asp:LinkButton ID="s_al_info_holder" runat="server" CssClass="s_al_info_holder">
+                                        <div class="s_al_img_holder">
+                                            <asp:Image ID="s_al_img" runat="server" CssClass="image_holder" ImageUrl='<%# Eval("al_img") %>'/>
+                                        </div>
+                                        <asp:Label ID="s_al_nm" runat="server" Text='<%# Eval("al_full_nm") %>'></asp:Label>
+                                        <asp:Label ID="s_al_id" runat="server" style="display:none;" Text='<%# Eval("alumni_id") %>'></asp:Label>
+                                       
+                                    </asp:LinkButton>
+                                    </ItemTemplate>
+                                    </asp:Repeater>
+
+                                    <asp:Panel ID="empty_search" runat="server" CssClass="empty_search" Visible="false">
+                                        <asp:Label ID="empty_search_lbl" runat="server" Text="No Result Found!"></asp:Label>
+                                     </asp:Panel>
+                                </div>
+                            </ContentTemplate>
+                                <Triggers>
+                                    <asp:AsyncPostBackTrigger ControlID="searchbar" EventName="TextChanged" />
+                                </Triggers>
+                            </asp:UpdatePanel>
+                                
+                            <div class="search_result_close">
+                                <span>Close</span>
+                            </div>
+                        </div>
+                        
+                        <asp:HyperLink ID="al_img_holder" runat="server" CssClass="al_img_holder" NavigateUrl="#">
+                            <asp:Image ID="al_img" runat="server" CssClass="image_holder"/>
+                        </asp:HyperLink>
+                        <i class="fa-solid fa-bars" id="sidebar_icon"></i>
+                    </div>
+                </div>
+                <!-- End Navbar -->
+
+
+
+
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <!-- Menu for Mobile -->
+                <div class="menu">
+                    
+                <div class="menu_top">
+                    <span>Alumni Platform</span>
+                    <i class="fa-solid fa-xmark" id="menu_close"></i>
+                </div>
+                <div class="menu_bottom">
+
+                    <asp:Panel ID="m_link1" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkDashboard2" runat="server" NavigateUrl="~/Alumni/DashBoard_Alumni.aspx">
+                        <i class="ri-function-fill"></i> Dashboard
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link2" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkProfile2" runat="server" NavigateUrl="~/Alumni/Profile.aspx">
+                        <i class="fas fa-user"></i> Profile
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link3" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkEvents2" runat="server" NavigateUrl="#">
+                        <i class="fas fa-calendar-alt"></i> Alumni Events
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link4" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkNetworking2" runat="server" NavigateUrl="/Alumni/chat.aspx">
+                        <i class="ri-message-3-fill"></i> Chat
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link5" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkDonation2" runat="server" NavigateUrl="/Alumni/donation.aspx">
+                        <i class="fas fa-donate"></i> Donation
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link6" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkJobPosting2" runat="server" NavigateUrl="/Alumni/job_posting.aspx">
+                        <i class="fas fa-briefcase"></i> Job Posting
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link7" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkSeminar2" runat="server" NavigateUrl="/Alumni/career_counseling.aspx">
+                        <i class="fas fa-chalkboard-teacher"></i> Seminar
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link8" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkFeedback2" runat="server" NavigateUrl="#">
+                        <i class="fas fa-comments"></i> Feedback
+                    </asp:HyperLink>
+                    </asp:Panel>
+
+                    <asp:Panel ID="m_link9" runat="server" CssClass="links">
+                    <asp:HyperLink ID="LinkNearby2" runat="server" NavigateUrl="#">
+                        <i class="fa-solid fa-location-dot"></i> Nearby 
+                    </asp:HyperLink>
+                    </asp:Panel>
+                </div>
+
+                </div>
+            <!-- End Menu -->
+        </form>
+    </div>
+
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+
+        /* Search Panel Toggle */
+        var searchbar = document.querySelector(".searchbar");
+        var searchbar_holder = document.querySelector(".searchbar_holder");
+        var search_close = document.querySelector(".search_result_close");
+        searchbar.addEventListener("focus", function () {
+            searchbar_holder.style.height = "350px";
+
+            search_close.style.opacity = "1";
+            search_close.style.display = "block";
+        });
+
+        search_close.addEventListener("click", function () {
+            searchbar_holder.style.height = "40px";
+            search_close.style.opacity = "0";
+            search_close.style.display = "none";
+        });
+        /* End Search Pael Toggle */
+
+        /* Menu Toggle */
+        var menu = document.querySelector(".menu");
+        var sidebar_icon = document.querySelector("#sidebar_icon").addEventListener("click", function () {
+
+            menu.style.top = "-10%";
+        });
+
+        var menu_close = document.querySelector("#menu_close").addEventListener("click", function () {
+            menu.style.top = "-100%";
+        });
+        /* End Menu Toggle */
+    </script>
+</body>
+</html>
